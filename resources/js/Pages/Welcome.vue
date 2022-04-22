@@ -30,7 +30,7 @@ defineProps({
 
         <div class="container">
             <div class="main-left">
-                <div class="main-left-logo">
+                <div class="main-left-logo text-sm">
                     <span>img</span>
                 </div>
             </div>
