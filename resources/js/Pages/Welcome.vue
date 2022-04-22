@@ -38,7 +38,7 @@ defineProps({
                 <ul>
                     <li>Works</li>
                     <li>About Me</li>
-                    <li>Contact</li>
+                   
                 </ul>
             </div>
         </div>
