@@ -15,6 +15,7 @@ use Inertia\Inertia;
 |
 */
 
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -23,6 +24,40 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
+Route::get('/mainlayout', function() {
+    return Inertia::render('MainLayout',[
+        'MainLayout' => Route::has('main-layout'),
+    ]);
+});
+
+
+Route::get('/aboutme',function(){
+    return Inertia::render('AboutMe',[
+        'AboutMe'=>Route::has('about-me'),
+    ]);
+});
+
+Route::get('/works', function() {
+    return Inertia::render('Works',[
+        'Works' => Route::has('works'),
+    ]);
+});
+
+Route::get('/contact', function() {
+    return Inertia::render('Contact',[
+        'Contact' => Route::has('contact'),
+    ]);
+});
+
+Route::get('/hero', function() {
+    return Inertia::render('Hero',[
+        'Hero' => Route::has('hero'),
+    ]);
+});
+
+
+
 
 
 

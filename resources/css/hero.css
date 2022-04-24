@@ -1,0 +1,15 @@
+hero,
+.hero {
+    @apply h-full p-12 text-center font-mono;
+}
+
+.hero-header {
+    @apply text-8xl;
+}
+
+.hero-body {
+    @apply text-5xl;
+}
+
+.hero-footer {
+}

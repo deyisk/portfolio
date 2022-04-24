@@ -1,0 +1,12 @@
+main,
+.main {
+    @apply h-full py-4 font-mono;
+}
+
+.main-left {
+    @apply h-14 text-center py-3;
+}
+
+.grid {
+    @apply grid-cols-4 gap-5 content-start p-4;
+}

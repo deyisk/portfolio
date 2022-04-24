@@ -1,56 +1,13 @@
-<script setup>
-import { Head, Link } from '@inertiajs/inertia-vue3';
-
-defineProps({
-    canLogin: Boolean,
-    canRegister: Boolean,
-    laravelVersion: String,
-    phpVersion: String,
-});
-</script>
-
 <template>
-    <Head title="Welcome" />
-    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+<main-layout></main-layout>
+<hero></hero>
+
+
+<!-- <div class="relative  items-top justify-center min-h-screen bg-white-100 sm:items-center sm:pt-0">
         <div v-if="canLogin" class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-            <Link v-if="$page.props.user" :href="route('dashboard')" class="text-sm text-gray-700 underline">
-                Dashboard
-            </Link>
+</div>
+</div> -->
 
-            <template v-else>
-                <Link :href="route('login')" class="text-sm text-gray-700 underline">
-                    Log in 
-                </Link>
-
-                <Link v-if="canRegister" :href="route('register')" class="ml-4 text-sm text-gray-700 underline">
-                    Register
-                </Link>
-            </template>
-        </div>
-
-        <div class="container">
-            <div class="main-left">
-                <div class="main-left-logo text-sm">
-                    <span>img</span>
-                </div>
-            </div>
-            <div class="main-right">
-                <ul>
-                    <li>Works</li>
-                    <li>About Me</li>
-                   
-                </ul>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-    </div>
 </template>
 
 <style scoped>
@@ -116,3 +73,29 @@ defineProps({
         }
     }
 </style>
+
+<script>
+    import { defineComponent } from 'vue'
+    import { Head, Link } from '@inertiajs/inertia-vue3';
+    import MainLayout from "../Layouts/MainLayout.vue";
+    import Hero from '../Layouts/Hero.vue';
+    
+
+
+    export default defineComponent({
+        components: {
+            MainLayout,
+            Head,
+            Link,
+            Hero,
+          
+        },
+
+        props: {
+            canLogin: Boolean,
+            canRegister: Boolean,
+            laravelVersion: String,
+            phpVersion: String,
+        }
+    })
+</script>
